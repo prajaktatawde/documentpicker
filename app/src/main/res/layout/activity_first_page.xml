@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvBottomSheet"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Add A Record"
+                android:textColor="#404547"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#e4e5ea" />
+
+            <LinearLayout
+                android:id="@+id/linearCamera"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center|left"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:padding="2dp"
+                    android:src="@drawable/healthwall_photo_video_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="Capture Photo"
+                    android:textColor="#404547"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#e4e5ea" />
+
+            <LinearLayout
+                android:id="@+id/linearGallery"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/gallery_icon_jobs"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="Upload From Gallery"
+                    android:textColor="#404547"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#e4e5ea" />
+
+            <LinearLayout
+                android:id="@+id/linearFile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/doc_iconn" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="Upload Files"
+                    android:textColor="#404547"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#e4e5ea" />
+
+            <LinearLayout
+                android:id="@+id/linearVideo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/doc_iconn"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="Upload Videos"
+                    android:textColor="#404547"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearRemove"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/iv_delete"
+                    app:tint="#049341" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="Remove Profile"
+                    android:textColor="#404547"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#e4e5ea" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:padding="2dp"
+        />
+</RelativeLayout>
