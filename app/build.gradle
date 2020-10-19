@@ -30,11 +30,16 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    implementation project(path: ':photoeditorsdk')
 
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1@aar'
+
+
 
 
 }

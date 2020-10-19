@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':photoeditorsdk'
 rootProject.name = "DocImagePickerDemo"

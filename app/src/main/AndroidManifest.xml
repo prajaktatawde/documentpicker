@@ -18,6 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".FilesActivity"></activity>
+        <activity android:name=".photoeditor.PhotoEditorActivity"></activity>
         <activity android:name=".VideosActivity" />
         <activity android:name=".ImagesActivity" />
         <activity

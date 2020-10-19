@@ -22,6 +22,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.docimagepickerdemo.photoeditor.PhotoEditorActivity;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -71,6 +73,10 @@ public class ImagesActivity extends Activity {
                 for (int i = 0; i < selectedImageList.size(); i++) {
                     Toast.makeText(getApplicationContext(), selectedImageList.get(i), Toast.LENGTH_LONG).show();
                 }
+
+                Intent intent=new Intent(getBaseContext(), PhotoEditorActivity.class);
+                intent.putExtra("multipleImage",selectedImageList);
+                startActivity(intent);
             }
         });
     }
