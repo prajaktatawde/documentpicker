@@ -21,13 +21,13 @@ import com.example.docimagepickerdemo.R;
 
 public class ImageFragment extends Fragment {
 
-    private PhotoEditorActivity photoEditorActivity;
+    private SelectedPhotosEditActivity photoEditorActivity;
     RecyclerView imageRecyclerView;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        photoEditorActivity = (PhotoEditorActivity) getActivity();
+        photoEditorActivity = (SelectedPhotosEditActivity) getActivity();
     }
 
     @Nullable

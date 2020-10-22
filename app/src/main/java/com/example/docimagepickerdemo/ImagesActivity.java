@@ -22,7 +22,10 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.docimagepickerdemo.photoeditor.FragmentBaseActivity;
+import com.example.docimagepickerdemo.photoeditor.NewPhotoEditiorActivity;
 import com.example.docimagepickerdemo.photoeditor.PhotoEditorActivity;
+import com.example.docimagepickerdemo.photoeditor.SelectedPhotosEditActivity;
 
 import java.io.File;
 import java.io.IOException;
@@ -74,7 +77,10 @@ public class ImagesActivity extends Activity {
                     Toast.makeText(getApplicationContext(), selectedImageList.get(i), Toast.LENGTH_LONG).show();
                 }
 
-                Intent intent=new Intent(getBaseContext(), PhotoEditorActivity.class);
+                //Intent intent=new Intent(getBaseContext(), PhotoEditorActivity.class);
+                //Intent intent=new Intent(getBaseContext(), NewPhotoEditiorActivity.class);
+                Intent intent=new Intent(getBaseContext(), SelectedPhotosEditActivity.class);
+                //Intent intent=new Intent(getBaseContext(), FragmentBaseActivity.class);
                 intent.putExtra("multipleImage",selectedImageList);
                 startActivity(intent);
             }
@@ -165,7 +171,7 @@ public class ImagesActivity extends Activity {
         // Check before add new item in ArrayList;
         if (!selectedImageList.contains(imageList.get(position).getImage())) {
             imageList.get(position).setSelected(true);
-            selectedImageList.add(0, imageList.get(position).getImage());
+            selectedImageList.add(imageList.get(position).getImage());
             selectedImageAdapter.notifyDataSetChanged();
             imageAdapter.notifyDataSetChanged();
         }

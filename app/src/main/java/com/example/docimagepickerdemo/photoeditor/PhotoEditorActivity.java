@@ -31,6 +31,7 @@ import com.ahmedadeltito.photoeditorsdk.BrushDrawingView;
 import com.ahmedadeltito.photoeditorsdk.OnPhotoEditorSDKListener;
 import com.ahmedadeltito.photoeditorsdk.PhotoEditorSDK;
 import com.ahmedadeltito.photoeditorsdk.ViewType;
+import com.example.docimagepickerdemo.Photosadapter;
 import com.example.docimagepickerdemo.R;
 import com.squareup.picasso.Picasso;
 import com.viewpagerindicator.PageIndicator;
@@ -57,14 +58,32 @@ public class PhotoEditorActivity extends AppCompatActivity implements View.OnCli
     private PhotoEditorSDK photoEditorSDK;
     private EditText edtCaption;
     ArrayList<String> list;
-    /*private GuideView.Builder builder;
-    private GuideView mGuideView;*/
+    RecyclerView rv_photos;
+    LinearLayoutManager listlayoutManager;
+    Photosadapter photosadapter;
+    Context context;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo_editor);
-       // Typeface newFont = Typeface.createFromAsset(getAssets(), "Eventtus-Icons.ttf");
+
+        context = this;
+
+        // String originalImagePath = getIntent().getExtras().getString("multipleImage");
+        list = getIntent().getExtras().getStringArrayList("multipleImage");
+       /* edtCaption.setText(getIntent().getStringExtra("description"));
+        edtCaption.setSelection(edtCaption.getText().length());*/
+        Log.e(TAG, String.valueOf(list));
+
+        rv_photos = findViewById(R.id.rv_photos);
+        listlayoutManager = new LinearLayoutManager(PhotoEditorActivity.this,LinearLayoutManager.HORIZONTAL,false);
+        rv_photos.setLayoutManager(listlayoutManager);
+
+        /*photosadapter = new Photosadapter(context,list);
+        rv_photos.setAdapter(photosadapter);*/
+
         BrushDrawingView brushDrawingView = (BrushDrawingView) findViewById(R.id.drawing_view);
         drawingViewColorPickerRecyclerView = (RecyclerView) findViewById(R.id.drawing_view_color_picker_recycler_view);
         parentImageRelativeLayout = (RelativeLayout) findViewById(R.id.parent_image_rl);
@@ -94,11 +113,7 @@ public class PhotoEditorActivity extends AppCompatActivity implements View.OnCli
         ViewPager pager = (ViewPager) findViewById(R.id.image_emoji_view_pager);
         PageIndicator indicator = (PageIndicator) findViewById(R.id.image_emoji_indicator);
 
-       // String originalImagePath = getIntent().getExtras().getString("multipleImage");
-        list = getIntent().getExtras().getStringArrayList("multipleImage");
-       /* edtCaption.setText(getIntent().getStringExtra("description"));
-        edtCaption.setSelection(edtCaption.getText().length());*/
-        Log.e(TAG, String.valueOf(list));
+
 
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inSampleSize = 1;

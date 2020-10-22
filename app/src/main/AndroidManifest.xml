@@ -17,8 +17,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FilesActivity"></activity>
-        <activity android:name=".photoeditor.PhotoEditorActivity"></activity>
+        <activity android:name=".photoeditor.FragmentBaseActivity"></activity>
+        <activity android:name=".photoeditor.SelectedPhotosEditActivity" />
+        <activity android:name=".DocumentActivity" />
+        <activity android:name=".photoeditor.NewPhotoEditiorActivity" />
+        <activity android:name=".FilesActivity" />
+        <activity android:name=".photoeditor.PhotoEditorActivity" />
         <activity android:name=".VideosActivity" />
         <activity android:name=".ImagesActivity" />
         <activity

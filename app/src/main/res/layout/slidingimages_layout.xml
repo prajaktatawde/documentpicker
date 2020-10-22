@@ -5,8 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
-
+    <ImageView
+        android:id="@+id/photo_edit_iv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop" />
     <RelativeLayout
+        android:visibility="gone"
         android:id="@+id/rl_sliding"
         android:layout_width="match_parent"
         android:layout_height="600dp">
@@ -115,7 +123,6 @@
                         android:layout_height="wrap_content"
                         android:padding="15dp"
                         android:text="@string/ic_close"
-                        android:elevation="@dimen/margin_20"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
 
@@ -138,7 +145,6 @@
                         android:layout_alignParentEnd="true"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="5dp"
-                        android:elevation="@dimen/margin_20"
                         android:background="@drawable/ic_edit_map"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp" />
@@ -164,7 +170,6 @@
                     android:background="@drawable/below_shadow" />
 
                 <RelativeLayout
-                    android:elevation="@dimen/margin_20"
                     android:id="@+id/bottom_parent_rl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -286,7 +291,6 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:text="@string/ic_continue"
-                        android:elevation="@dimen/margin_20"
                         android:textColor="#FFFFFF"
                         android:textSize="40sp" />
 
@@ -364,6 +368,7 @@
         android:layout_below="@id/rl_sliding"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:layout_alignParentBottom="true">
 
         <androidx.recyclerview.widget.RecyclerView
